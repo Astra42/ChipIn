@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background">
+
+    <TextView
+        android:id="@+id/main_logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="50dp"
+        android:drawablePadding="10sp"
+        android:fontFamily="@font/baloo"
+        android:gravity="center_vertical"
+        android:text="@string/logo_else"
+        android:textColor="@color/white"
+        android:textSize="50sp"
+        app:drawableStartCompat="@drawable/ic_else"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/add_new_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="110dp"
+        android:fontFamily="@font/baloo"
+        android:text="@string/add_new_name"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@+id/main_logo"
+        app:layout_constraintTop_toBottomOf="@+id/main_logo" />
+
+    <EditText
+        android:id="@+id/add_hint_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:autofillHints="@string/add_hint_name"
+        android:background="@drawable/input_form"
+        android:ems="9"
+        android:fontFamily="@font/baloo"
+        android:hint="@string/add_hint_name"
+        android:inputType="text"
+        android:maxLength="15"
+        android:paddingStart="5sp"
+        android:textColor="@color/black"
+        android:textColorHint="@color/hint_color"
+        app:layout_constraintStart_toStartOf="@+id/add_new_name"
+        app:layout_constraintTop_toBottomOf="@+id/add_new_name"
+        tools:ignore="RtlSymmetry" />
+
+    <TextView
+        android:id="@+id/add_new_description"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/baloo"
+        android:text="@string/add_new_description"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@+id/add_hint_name"
+        app:layout_constraintTop_toBottomOf="@+id/add_hint_name" />
+
+    <EditText
+        android:id="@+id/add_hint_description"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:autofillHints="@string/add_hint_name"
+        android:background="@drawable/input_form"
+        android:ems="9"
+        android:fontFamily="@font/baloo"
+        android:hint="@string/add_hint_description"
+        android:inputType="text"
+        android:maxLength="15"
+        android:paddingStart="5sp"
+        android:textColor="@color/black"
+        android:textColorHint="@color/hint_color"
+        app:layout_constraintStart_toStartOf="@+id/add_new_description"
+        app:layout_constraintTop_toBottomOf="@+id/add_new_description"
+        tools:ignore="RtlSymmetry" />
+
+    <TextView
+        android:id="@+id/add_new_members"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/baloo"
+        android:text="@string/add_new_members"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@+id/add_hint_description"
+        app:layout_constraintTop_toBottomOf="@+id/add_hint_description" />
+
+    <EditText
+        android:id="@+id/add_hint_members"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:autofillHints="@string/add_hint_members"
+        android:background="@drawable/input_form"
+        android:ems="9"
+        android:fontFamily="@font/baloo"
+        android:hint="@string/add_hint_members"
+        android:inputType="text"
+        android:maxLength="15"
+        android:paddingStart="5sp"
+        android:textColor="@color/black"
+        android:textColorHint="@color/hint_color"
+        app:layout_constraintStart_toStartOf="@+id/add_new_members"
+        app:layout_constraintTop_toBottomOf="@+id/add_new_members"
+        tools:ignore="RtlSymmetry" />
+
+    <Button
+        android:id="@+id/add_button"
+        android:layout_width="165sp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="70dp"
+        android:background="@drawable/button_casual_form"
+        android:backgroundTint="@color/button_orange"
+        android:fontFamily="@font/baloo"
+        android:text="@string/add_new_button"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="@+id/add_hint_members"
+        app:layout_constraintTop_toBottomOf="@+id/add_hint_members" />
+
+    <Button
+        android:id="@+id/back_button"
+        android:layout_width="165sp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="70dp"
+        android:background="@drawable/button_casual_form"
+        android:backgroundTint="@color/white_smoke"
+        android:fontFamily="@font/baloo"
+        android:text="@string/back_button"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toEndOf="@+id/add_button"
+        app:layout_constraintTop_toBottomOf="@+id/add_hint_members" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
