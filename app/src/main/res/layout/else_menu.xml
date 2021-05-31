@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background">
+
+    <TextView
+        android:id="@+id/main_logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="50dp"
+        android:drawablePadding="10sp"
+        android:fontFamily="@font/baloo"
+        android:gravity="center_vertical"
+        android:text="@string/logo_else"
+        android:textColor="@color/white"
+        android:textSize="50sp"
+        app:drawableStartCompat="@drawable/ic_else"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/menu_text_add"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="85dp"
+        android:fontFamily="@font/baloo"
+        android:text="@string/menu_button_add"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@+id/main_logo"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/main_logo"
+        app:layout_constraintTop_toBottomOf="@+id/main_logo" />
+
+    <Button
+        android:id="@+id/button_add"
+        android:layout_width="50sp"
+        android:layout_height="50sp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="80dp"
+        android:background="@drawable/ic_add_new"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toEndOf="@+id/menu_text_add"
+        app:layout_constraintTop_toBottomOf="@+id/main_logo" />
+
+    <TextView
+        android:id="@+id/menu_text_list"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:fontFamily="@font/baloo"
+        android:text="@string/menu_text_list"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@+id/menu_text_add"
+        app:layout_constraintTop_toBottomOf="@+id/menu_text_add" />
+
+    <ScrollView
+        android:id="@+id/menu_scroll"
+        android:layout_width="266dp"
+        android:layout_height="260dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintStart_toStartOf="@+id/menu_text_list"
+        app:layout_constraintTop_toBottomOf="@+id/menu_text_list">
+
+        <LinearLayout
+            android:id="@+id/menu_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" />
+    </ScrollView>
+
+    <Button
+        android:id="@+id/menu_button_back"
+        android:layout_width="300sp"
+        android:layout_height="45sp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="25dp"
+        android:background="@drawable/button_casual_form"
+        android:backgroundTint="@color/white_smoke"
+        android:fontFamily="@font/baloo"
+        android:text="@string/back_button"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        app:layout_constraintStart_toStartOf="@+id/menu_scroll"
+        app:layout_constraintTop_toBottomOf="@+id/menu_scroll" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

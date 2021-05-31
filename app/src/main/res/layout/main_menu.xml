@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background">
+
+    <TextView
+        android:id="@+id/main_logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="50dp"
+        android:drawablePadding="10sp"
+        android:fontFamily="@font/baloo"
+        android:gravity="center_vertical"
+        android:text="@string/logo_name"
+        android:textColor="@color/white"
+        android:textSize="50sp"
+        app:drawableStartCompat="@drawable/ic_event"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/menu_button_food"
+        android:layout_width="130sp"
+        android:layout_height="130sp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="120dp"
+        android:paddingTop="20dp"
+        android:drawableTop="@drawable/ic_food_button"
+        android:fontFamily="@font/baloo"
+        android:text="@string/logo_food"
+        android:background="@drawable/button_main_menu_form"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="@+id/main_logo"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/main_logo"
+        app:layout_constraintTop_toBottomOf="@+id/main_logo" />
+
+    <Button
+        android:id="@+id/menu_button_drinks"
+        android:layout_width="130sp"
+        android:layout_height="130sp"
+        android:layout_marginStart="20dp"
+        android:paddingTop="20dp"
+        android:layout_marginTop="120dp"
+        android:drawableTop="@drawable/ic_drinks_button"
+        android:background="@drawable/button_main_menu_form"
+        android:fontFamily="@font/baloo"
+        android:text="@string/logo_drinks"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        app:layout_constraintStart_toEndOf="@+id/menu_button_food"
+        app:layout_constraintTop_toBottomOf="@+id/main_logo" />
+
+    <Button
+        android:id="@+id/menu_button_else"
+        android:layout_width="130sp"
+        android:layout_height="130sp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:paddingTop="20dp"
+        android:fontFamily="@font/baloo"
+        android:background="@drawable/button_main_menu_form"
+        android:drawableTop="@drawable/ic_else_button"
+        android:text="@string/logo_else"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toStartOf="@+id/menu_button_event"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/menu_button_food"
+        app:layout_constraintTop_toBottomOf="@+id/menu_button_food" />
+
+    <Button
+        android:id="@+id/menu_button_event"
+        android:layout_width="130sp"
+        android:layout_height="130sp"
+        android:paddingTop="20dp"
+        android:background="@drawable/button_main_menu_form"
+        android:layout_marginTop="20dp"
+        android:drawableTop="@drawable/ic_event_button"
+        android:fontFamily="@font/baloo"
+        android:backgroundTintMode="multiply"
+        android:text="@string/logo_event"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="@+id/menu_button_drinks"
+        app:layout_constraintTop_toBottomOf="@+id/menu_button_drinks" />
+
+    <Button
+        android:id="@+id/menu_button_back"
+        android:layout_width="200sp"
+        android:layout_height="45sp"
+        android:layout_marginTop="45dp"
+        android:backgroundTint="@color/white_smoke"
+        android:fontFamily="@font/baloo"
+        android:text="@string/back_button"
+        android:textColor="@color/black"
+        android:background="@drawable/button_casual_form"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="@+id/menu_button_event"
+        app:layout_constraintHorizontal_bias="0.541"
+        app:layout_constraintStart_toStartOf="@+id/menu_button_else"
+        app:layout_constraintTop_toBottomOf="@+id/menu_button_else" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
