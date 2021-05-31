@@ -88,5 +88,5 @@ lint/tmp/
 *.hprof
 
 # Own ignores
-.bad
-.gradle
+*.bad
+*.gradle
