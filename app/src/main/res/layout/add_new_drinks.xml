@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/background">
+    android:background="@drawable/background"
+    tools:context="com.chipin.AddDrinks">
 
     <TextView
         android:id="@+id/main_logo"
@@ -35,7 +36,7 @@
         app:layout_constraintTop_toBottomOf="@+id/main_logo" />
 
     <EditText
-        android:id="@+id/enter_name"
+        android:id="@+id/drink_enter_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="15dp"
@@ -62,11 +63,11 @@
         android:text="@string/add_new_description"
         android:textColor="@color/black"
         android:textSize="20sp"
-        app:layout_constraintStart_toStartOf="@+id/enter_name"
-        app:layout_constraintTop_toBottomOf="@+id/enter_name" />
+        app:layout_constraintStart_toStartOf="@+id/drink_enter_name"
+        app:layout_constraintTop_toBottomOf="@+id/drink_enter_name" />
 
     <EditText
-        android:id="@+id/enter_description"
+        android:id="@+id/drink_enter_description"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="15dp"
@@ -93,11 +94,11 @@
         android:text="@string/add_new_members"
         android:textColor="@color/black"
         android:textSize="20sp"
-        app:layout_constraintStart_toStartOf="@+id/enter_description"
-        app:layout_constraintTop_toBottomOf="@+id/enter_description" />
+        app:layout_constraintStart_toStartOf="@+id/drink_enter_description"
+        app:layout_constraintTop_toBottomOf="@+id/drink_enter_description" />
 
     <EditText
-        android:id="@+id/enter_members"
+        android:id="@+id/drink_enter_members"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="15dp"
@@ -116,7 +117,7 @@
         tools:ignore="RtlSymmetry" />
 
     <Button
-        android:id="@+id/button_add"
+        android:id="@+id/drink_button_add"
         android:layout_width="165sp"
         android:layout_height="wrap_content"
         android:layout_marginTop="70dp"
@@ -125,11 +126,11 @@
         android:fontFamily="@font/baloo"
         android:text="@string/add_new_button"
         android:textColor="@color/black"
-        app:layout_constraintStart_toStartOf="@+id/enter_members"
-        app:layout_constraintTop_toBottomOf="@+id/enter_members" />
+        app:layout_constraintStart_toStartOf="@+id/drink_enter_members"
+        app:layout_constraintTop_toBottomOf="@+id/drink_enter_members" />
 
     <Button
-        android:id="@+id/button_back"
+        android:id="@+id/drink_button_back"
         android:layout_width="165sp"
         android:layout_height="wrap_content"
         android:layout_marginStart="30dp"
@@ -139,7 +140,7 @@
         android:fontFamily="@font/baloo"
         android:text="@string/back_button"
         android:textColor="@color/black"
-        app:layout_constraintStart_toEndOf="@+id/button_add"
-        app:layout_constraintTop_toBottomOf="@+id/enter_members" />
+        app:layout_constraintStart_toEndOf="@+id/drink_button_add"
+        app:layout_constraintTop_toBottomOf="@+id/drink_enter_members" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
