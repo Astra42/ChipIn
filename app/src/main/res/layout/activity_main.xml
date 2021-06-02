@@ -16,7 +16,7 @@
         android:drawablePadding="10sp"
         android:fontFamily="@font/baloo"
         android:gravity="center_vertical"
-        android:text="@string/logo_name"
+        android:text="@string/logo_app"
         android:textColor="@color/white"
         android:textSize="50sp"
         app:drawableStartCompat="@drawable/ic_event"
@@ -24,7 +24,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/main_text_enter"
+        android:id="@+id/text_enter"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="140dp"
@@ -36,7 +36,7 @@
         app:layout_constraintTop_toBottomOf="@+id/main_logo" />
 
     <EditText
-        android:id="@+id/main_hint"
+        android:id="@+id/enter_code"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="52dp"
@@ -50,12 +50,12 @@
         android:paddingStart="5sp"
         android:textColor="@color/black"
         android:textColorHint="@color/hint_color"
-        app:layout_constraintStart_toStartOf="@+id/main_text_enter"
-        app:layout_constraintTop_toBottomOf="@+id/main_text_enter"
+        app:layout_constraintStart_toStartOf="@+id/text_enter"
+        app:layout_constraintTop_toBottomOf="@+id/text_enter"
         tools:ignore="RtlSymmetry" />
 
     <Button
-        android:id="@+id/main_join_button"
+        android:id="@+id/button_join"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="44sp"
@@ -66,11 +66,11 @@
         android:textColor="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.1"
-        app:layout_constraintStart_toEndOf="@+id/main_hint"
-        app:layout_constraintTop_toBottomOf="@+id/main_text_enter" />
+        app:layout_constraintStart_toEndOf="@+id/enter_code"
+        app:layout_constraintTop_toBottomOf="@+id/text_enter" />
 
     <Button
-        android:id="@+id/main_button_create"
+        android:id="@+id/button_create"
         android:layout_width="300dp"
         android:layout_marginStart="30dp"
         android:layout_height="75dp"
@@ -81,7 +81,7 @@
         android:text="@string/main_button_create"
         android:textColor="@color/black"
         android:textSize="20sp"
-        app:layout_constraintStart_toStartOf="@+id/main_hint"
-        app:layout_constraintTop_toBottomOf="@+id/main_hint" />
+        app:layout_constraintStart_toStartOf="@+id/enter_code"
+        app:layout_constraintTop_toBottomOf="@+id/enter_code" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

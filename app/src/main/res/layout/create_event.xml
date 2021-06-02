@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/background">
@@ -15,7 +14,7 @@
         android:drawablePadding="10sp"
         android:fontFamily="@font/baloo"
         android:gravity="center_vertical"
-        android:text="@string/logo_name"
+        android:text="@string/logo_app"
         android:textColor="@color/white"
         android:textSize="50sp"
         app:drawableStartCompat="@drawable/ic_event"
@@ -23,7 +22,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/main_text_enter"
+        android:id="@+id/text_enter"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="90dp"
@@ -49,10 +48,10 @@
         android:paddingEnd="5dp"
         android:textColor="@color/black"
         android:textColorHint="@color/hint_color"
-        app:layout_constraintEnd_toEndOf="@+id/main_text_enter"
+        app:layout_constraintEnd_toEndOf="@+id/text_enter"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/main_text_enter"
-        app:layout_constraintTop_toBottomOf="@+id/main_text_enter"
+        app:layout_constraintStart_toStartOf="@+id/text_enter"
+        app:layout_constraintTop_toBottomOf="@+id/text_enter"
         android:autofillHints="@string/create_hint_name" />
 
     <EditText
@@ -115,7 +114,7 @@
         android:autofillHints="@string/create_hint_members" />
 
     <Button
-        android:id="@+id/create_button"
+        android:id="@+id/button_create"
         android:layout_width="165sp"
         android:layout_height="wrap_content"
         android:layout_marginTop="65dp"
@@ -128,7 +127,7 @@
         app:layout_constraintTop_toBottomOf="@+id/enter_location" />
 
     <Button
-        android:id="@+id/back_button"
+        android:id="@+id/button_back"
         android:layout_width="165sp"
         android:layout_height="wrap_content"
         android:layout_marginStart="30dp"
@@ -138,7 +137,7 @@
         android:fontFamily="@font/baloo"
         android:text="@string/back_button"
         android:textColor="@color/black"
-        app:layout_constraintStart_toEndOf="@+id/create_button"
+        app:layout_constraintStart_toEndOf="@+id/button_create"
         app:layout_constraintTop_toBottomOf="@+id/enter_location" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
