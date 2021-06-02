@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/background">
+    android:background="@drawable/background"
+    tools:context="com.chipin.CreateEvent">
 
     <TextView
         android:id="@+id/main_logo"
@@ -34,7 +36,7 @@
         app:layout_constraintTop_toBottomOf="@+id/main_logo" />
 
     <EditText
-        android:id="@+id/enter_name"
+        android:id="@+id/event_enter_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="50dp"
@@ -69,12 +71,12 @@
         android:paddingEnd="5dp"
         android:textColor="@color/black"
         android:textColorHint="@color/hint_color"
-        app:layout_constraintEnd_toEndOf="@+id/enter_name"
-        app:layout_constraintStart_toStartOf="@+id/enter_name"
-        app:layout_constraintTop_toBottomOf="@+id/enter_name" />
+        app:layout_constraintEnd_toEndOf="@+id/event_enter_name"
+        app:layout_constraintStart_toStartOf="@+id/event_enter_name"
+        app:layout_constraintTop_toBottomOf="@+id/event_enter_name" />
 
     <EditText
-        android:id="@+id/enter_members"
+        android:id="@+id/event_enter_members"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="30dp"
@@ -94,7 +96,7 @@
         android:autofillHints="@string/create_hint_members" />
 
     <EditText
-        android:id="@+id/enter_location"
+        android:id="@+id/event_enter_location"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="30dp"
@@ -107,14 +109,14 @@
         android:paddingEnd="5dp"
         android:textColor="@color/black"
         android:textColorHint="@color/hint_color"
-        app:layout_constraintEnd_toEndOf="@+id/enter_members"
+        app:layout_constraintEnd_toEndOf="@+id/event_enter_members"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/enter_members"
-        app:layout_constraintTop_toBottomOf="@+id/enter_members"
+        app:layout_constraintStart_toStartOf="@+id/event_enter_members"
+        app:layout_constraintTop_toBottomOf="@+id/event_enter_members"
         android:autofillHints="@string/create_hint_members" />
 
     <Button
-        android:id="@+id/button_create"
+        android:id="@+id/create_button_create"
         android:layout_width="165sp"
         android:layout_height="wrap_content"
         android:layout_marginTop="65dp"
@@ -123,11 +125,11 @@
         android:fontFamily="@font/baloo"
         android:text="@string/create_button_create"
         android:textColor="@color/black"
-        app:layout_constraintStart_toStartOf="@+id/enter_location"
-        app:layout_constraintTop_toBottomOf="@+id/enter_location" />
+        app:layout_constraintStart_toStartOf="@+id/event_enter_location"
+        app:layout_constraintTop_toBottomOf="@+id/event_enter_location" />
 
     <Button
-        android:id="@+id/button_back"
+        android:id="@+id/create_button_back"
         android:layout_width="165sp"
         android:layout_height="wrap_content"
         android:layout_marginStart="30dp"
@@ -137,7 +139,7 @@
         android:fontFamily="@font/baloo"
         android:text="@string/back_button"
         android:textColor="@color/black"
-        app:layout_constraintStart_toEndOf="@+id/button_create"
-        app:layout_constraintTop_toBottomOf="@+id/enter_location" />
+        app:layout_constraintStart_toEndOf="@+id/create_button_create"
+        app:layout_constraintTop_toBottomOf="@+id/event_enter_location" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
