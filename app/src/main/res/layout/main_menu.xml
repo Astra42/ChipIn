@@ -14,7 +14,7 @@
         android:drawablePadding="10sp"
         android:fontFamily="@font/baloo"
         android:gravity="center_vertical"
-        android:text="@string/logo_name"
+        android:text="@string/logo_app"
         android:textColor="@color/white"
         android:textSize="50sp"
         app:drawableStartCompat="@drawable/ic_event"
@@ -22,7 +22,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/menu_button_food"
+        android:id="@+id/button_food"
         android:layout_width="130sp"
         android:layout_height="130sp"
         android:layout_marginStart="30dp"
@@ -40,7 +40,7 @@
         app:layout_constraintTop_toBottomOf="@+id/main_logo" />
 
     <Button
-        android:id="@+id/menu_button_drinks"
+        android:id="@+id/button_drinks"
         android:layout_width="130sp"
         android:layout_height="130sp"
         android:layout_marginStart="20dp"
@@ -52,11 +52,11 @@
         android:text="@string/logo_drinks"
         android:textColor="@color/black"
         android:textSize="15sp"
-        app:layout_constraintStart_toEndOf="@+id/menu_button_food"
+        app:layout_constraintStart_toEndOf="@+id/button_food"
         app:layout_constraintTop_toBottomOf="@+id/main_logo" />
 
     <Button
-        android:id="@+id/menu_button_else"
+        android:id="@+id/button_else"
         android:layout_width="130sp"
         android:layout_height="130sp"
         android:layout_marginTop="20dp"
@@ -68,13 +68,13 @@
         android:text="@string/logo_else"
         android:textColor="@color/black"
         android:textSize="15sp"
-        app:layout_constraintEnd_toStartOf="@+id/menu_button_event"
+        app:layout_constraintEnd_toStartOf="@+id/button_event"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/menu_button_food"
-        app:layout_constraintTop_toBottomOf="@+id/menu_button_food" />
+        app:layout_constraintStart_toStartOf="@+id/button_food"
+        app:layout_constraintTop_toBottomOf="@+id/button_food" />
 
     <Button
-        android:id="@+id/menu_button_event"
+        android:id="@+id/button_event"
         android:layout_width="130sp"
         android:layout_height="130sp"
         android:paddingTop="20dp"
@@ -86,11 +86,11 @@
         android:text="@string/logo_event"
         android:textColor="@color/black"
         android:textSize="15sp"
-        app:layout_constraintEnd_toEndOf="@+id/menu_button_drinks"
-        app:layout_constraintTop_toBottomOf="@+id/menu_button_drinks" />
+        app:layout_constraintEnd_toEndOf="@+id/button_drinks"
+        app:layout_constraintTop_toBottomOf="@+id/button_drinks" />
 
     <Button
-        android:id="@+id/menu_button_back"
+        android:id="@+id/button_back"
         android:layout_width="200sp"
         android:layout_height="45sp"
         android:layout_marginTop="45dp"
@@ -100,9 +100,9 @@
         android:textColor="@color/black"
         android:background="@drawable/button_casual_form"
         android:textSize="15sp"
-        app:layout_constraintEnd_toEndOf="@+id/menu_button_event"
+        app:layout_constraintEnd_toEndOf="@+id/button_event"
         app:layout_constraintHorizontal_bias="0.541"
-        app:layout_constraintStart_toStartOf="@+id/menu_button_else"
-        app:layout_constraintTop_toBottomOf="@+id/menu_button_else" />
+        app:layout_constraintStart_toStartOf="@+id/button_else"
+        app:layout_constraintTop_toBottomOf="@+id/button_else" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
