@@ -157,7 +157,7 @@
         android:id="@+id/else_button_back"
         android:layout_width="165sp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="30dp"
+        android:layout_marginStart="10dp"
         android:layout_marginTop="70dp"
         android:background="@drawable/button_casual_form"
         android:backgroundTint="@color/white_smoke"
