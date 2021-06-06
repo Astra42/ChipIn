@@ -3,17 +3,17 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:clickable="true"
     android:layout_height="match_parent"
     android:background="@color/white"
+    android:clickable="true"
     tools:context="com.chipin.FoodMenu">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/up_layout"
         android:layout_width="match_parent"
         android:layout_height="200dp"
-        android:clickable="true"
         android:background="@color/main_orange"
+        android:clickable="true"
         app:layout_constraintTop_toTopOf="parent">
 
         <TextView
@@ -37,19 +37,18 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/down_layout"
         android:layout_width="match_parent"
-        android:clickable="true"
         android:layout_height="30dp"
         android:background="@color/main_orange"
+        android:clickable="true"
         app:layout_constraintBottom_toBottomOf="parent"
-        tools:layout_editor_absoluteX="0dp">
-    </androidx.constraintlayout.widget.ConstraintLayout>
+        tools:layout_editor_absoluteX="0dp"></androidx.constraintlayout.widget.ConstraintLayout>
 
     <TextView
         android:id="@+id/text_add"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="25dp"
         android:layout_marginStart="25dp"
+        android:layout_marginTop="25dp"
         android:fontFamily="@font/baloo_cyrillic"
         android:text="@string/menu_button_add"
         android:textColor="@color/black"
@@ -64,9 +63,9 @@
         android:layout_width="50sp"
         android:layout_height="50sp"
         android:layout_marginStart="12dp"
-        android:onClick="addNewPosition"
         android:layout_marginTop="15dp"
         android:background="@drawable/ic_add_new"
+        android:onClick="addNewPosition"
         android:textColor="@color/black"
         app:layout_constraintStart_toEndOf="@+id/text_add"
         app:layout_constraintTop_toBottomOf="@+id/up_layout" />
@@ -103,8 +102,6 @@
         android:id="@+id/food_menu_button_back"
         android:layout_width="300sp"
         android:layout_height="45sp"
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="25dp"
         android:background="@drawable/button_casual_form"
         android:backgroundTint="@color/white_smoke"
         android:fontFamily="@font/baloo_cyrillic"
@@ -112,7 +109,9 @@
         android:text="@string/back_button"
         android:textColor="@color/black"
         android:textSize="15sp"
-        app:layout_constraintStart_toStartOf="@+id/menu_scroll"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="25dp"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/menu_scroll" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

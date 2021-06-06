@@ -12,8 +12,8 @@
         android:id="@+id/up_layout"
         android:layout_width="match_parent"
         android:layout_height="200dp"
-        android:clickable="true"
         android:background="@color/main_orange"
+        android:clickable="true"
         app:layout_constraintTop_toTopOf="parent">
 
         <TextView
@@ -38,8 +38,8 @@
         android:id="@+id/down_layout"
         android:layout_width="match_parent"
         android:layout_height="30dp"
-        android:clickable="true"
         android:background="@color/main_orange"
+        android:clickable="true"
         app:layout_constraintBottom_toBottomOf="parent"
         tools:layout_editor_absoluteX="0dp">
 
@@ -49,8 +49,8 @@
         android:id="@+id/text_enter"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
         android:layout_marginStart="25dp"
+        android:layout_marginTop="50dp"
         android:fontFamily="@font/baloo_cyrillic"
         android:text="@string/create_text_fill"
         android:textColor="@color/black"
@@ -63,6 +63,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="50dp"
+        android:autofillHints="@string/create_hint_name"
         android:background="@drawable/input_form"
         android:ems="6"
         android:fontFamily="@font/baloo_cyrillic"
@@ -76,8 +77,7 @@
         app:layout_constraintEnd_toEndOf="@+id/text_enter"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/text_enter"
-        app:layout_constraintTop_toBottomOf="@+id/text_enter"
-        android:autofillHints="@string/create_hint_name" />
+        app:layout_constraintTop_toBottomOf="@+id/text_enter" />
 
     <EditText
         android:id="@+id/event_enter_date"
@@ -103,6 +103,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="30dp"
+        android:autofillHints="@string/create_hint_members"
         android:background="@drawable/input_form"
         android:ems="6"
         android:fontFamily="@font/baloo_cyrillic"
@@ -115,14 +116,14 @@
         app:layout_constraintEnd_toEndOf="@+id/event_enter_date"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/event_enter_date"
-        app:layout_constraintTop_toBottomOf="@+id/event_enter_date"
-        android:autofillHints="@string/create_hint_members" />
+        app:layout_constraintTop_toBottomOf="@+id/event_enter_date" />
 
     <EditText
         android:id="@+id/event_enter_location"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="30dp"
+        android:autofillHints="@string/create_hint_members"
         android:background="@drawable/input_form"
         android:ems="6"
         android:fontFamily="@font/baloo_cyrillic"
@@ -135,33 +136,33 @@
         app:layout_constraintEnd_toEndOf="@+id/event_enter_members"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/event_enter_members"
-        app:layout_constraintTop_toBottomOf="@+id/event_enter_members"
-        android:autofillHints="@string/create_hint_members" />
+        app:layout_constraintTop_toBottomOf="@+id/event_enter_members" />
 
     <Button
         android:id="@+id/create_button_create"
         android:layout_width="165sp"
-        android:onClick="createEvent"
         android:layout_height="wrap_content"
         android:layout_marginTop="65dp"
+        android:layout_marginEnd="25dp"
         android:background="@drawable/button_casual_form"
         android:backgroundTint="@color/button_orange"
         android:fontFamily="@font/baloo_cyrillic"
+        android:onClick="createEvent"
         android:text="@string/create_button_create"
         android:textColor="@color/black"
-        app:layout_constraintStart_toStartOf="@+id/event_enter_location"
+        app:layout_constraintEnd_toEndOf="@+id/event_enter_location"
         app:layout_constraintTop_toBottomOf="@+id/event_enter_location" />
 
     <Button
         android:id="@+id/create_button_back"
         android:layout_width="165sp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="30dp"
-        android:onClick="goBack"
+        android:layout_marginStart="10dp"
         android:layout_marginTop="65dp"
         android:background="@drawable/button_casual_form"
         android:backgroundTint="@color/white_smoke"
         android:fontFamily="@font/baloo_cyrillic"
+        android:onClick="goBack"
         android:text="@string/back_button"
         android:textColor="@color/black"
         app:layout_constraintStart_toEndOf="@+id/create_button_create"
