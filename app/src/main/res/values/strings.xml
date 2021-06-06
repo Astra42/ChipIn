@@ -2,42 +2,45 @@
     <string name="app_name">ChipIn!</string>
 
     <string name="logo_app">ChipIn</string>
-    <string name="logo_drinks">Drinks</string>
-    <string name="logo_food">Food</string>
-    <string name="logo_else">Else</string>
-    <string name="logo_event">Event</string>
+    <string name="logo_drinks">Напитки</string>
+    <string name="logo_food">Продукты</string>
+    <string name="logo_else">Прочее</string>
+    <string name="logo_event">Ивент</string>
 
-    <string name="main_text_join">Enter event code:</string>
-    <string name="main_button_create">Create event </string>
-    <string name="main_button_join">Join</string>
+    <string name="main_text_join">Введите код мероприятия:</string>
+    <string name="main_button_create">
+        Создать мероприятие</string>
+    <string name="main_button_join">Войти</string>
     <string name="main_plain_hint">000000</string>
 
-    <string name="create_text_fill">Fill fields:</string>
-    <string name="create_hint_name">Name</string>
-    <string name="create_hint_date">Date</string>
-    <string name="create_hint_location">Location</string>
-    <string name="create_hint_members">Members</string>
-    <string name="create_button_create">Create</string>
+    <string name="create_text_fill">Заполните поля:</string>
+    <string name="create_hint_name">Название</string>
+    <string name="create_hint_date">Дата</string>
+    <string name="create_hint_location">Место</string>
+    <string name="create_hint_members">Участники</string>
+    <string name="create_button_create">Создать</string>
 
-    <string name="menu_button_add">Add new position:</string>
-    <string name="menu_text_list">List:</string>
+    <string name="menu_button_add">Добавьте новую позицию:</string>
+    <string name="menu_text_list">Список:</string>
 
-    <string name="add_new_name">Enter name:</string>
-    <string name="add_new_description">Enter description:</string>
-    <string name="add_new_members">Enter members:</string>
-    <string name="add_hint_name">Name</string>
-    <string name="add_hint_description">Description</string>
-    <string name="add_hint_members">Members</string>
-    <string name="add_new_button">Add</string>
+    <string name="add_new_name">Введите название:</string>
+    <string name="add_new_description">Введите кол-во людей:</string>
+    <string name="add_new_price">Введите цену:</string>
+    <string name="add_hint_name">Название</string>
+    <string name="add_hint_description">Кол-во людей</string>
+    <string name="add_hint_price">Цена</string>
+    <string name="add_new_button">Добавить</string>
 
-    <string name="info_name">Event name:</string>
-    <string name="info_location">Event location:</string>
-    <string name="info_members">Event members:</string>
-    <string name="info_date">Event date:</string>
+    <string name="info_name">Название мероприятия:</string>
+    <string name="info_location">Место проведения:</string>
+    <string name="info_members">Кол-во людей:</string>
+    <string name="info_date">Дата проведения:</string>
     <string name="event_name">Kazantip 2012</string>
     <string name="event_date">12/12/12 12:12</string>
     <string name="event_members">999</string>
     <string name="event_location">Football court</string>
 
-    <string name="back_button">Back</string>
+    <string name="back_button">Назад</string>
+
+    <string name="not_enough_input">Заполните все поля</string>
 </resources>

@@ -4,36 +4,49 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/background"
+    android:background="@color/white"
+    android:clickable="true"
     tools:context=".MainActivity">
 
-    <TextView
-        android:id="@+id/main_logo"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="25dp"
-        android:layout_marginTop="50dp"
-        android:drawablePadding="10sp"
-        android:fontFamily="@font/baloo"
-        android:gravity="center_vertical"
-        android:text="@string/logo_app"
-        android:textColor="@color/white"
-        android:textSize="50sp"
-        app:drawableStartCompat="@drawable/ic_event"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/up_layout"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:clickable="true"
+        android:background="@color/main_orange"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/main_logo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="50dp"
+            android:drawablePadding="10sp"
+            android:fontFamily="@font/baloo_cyrillic"
+            android:gravity="center_vertical"
+            android:text="@string/logo_app"
+            android:textColor="@color/white"
+            android:textSize="50sp"
+            app:drawableStartCompat="@drawable/ic_event"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
 
     <TextView
         android:id="@+id/text_enter"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="140dp"
-        android:fontFamily="@font/baloo"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="60dp"
+        android:fontFamily="@font/baloo_cyrillic"
         android:text="@string/main_text_join"
         android:textColor="@color/black"
         android:textSize="25sp"
-        app:layout_constraintStart_toStartOf="@+id/main_logo"
-        app:layout_constraintTop_toBottomOf="@+id/main_logo" />
+        app:layout_constraintStart_toStartOf="@+id/up_layout"
+        app:layout_constraintTop_toBottomOf="@+id/up_layout" />
 
     <EditText
         android:id="@+id/enter_code"
@@ -43,7 +56,7 @@
         android:autofillHints="@string/main_plain_hint"
         android:background="@drawable/input_form"
         android:ems="6"
-        android:fontFamily="@font/baloo"
+        android:fontFamily="@font/baloo_cyrillic"
         android:hint="@string/main_plain_hint"
         android:inputType="number"
         android:maxLength="6"
@@ -58,30 +71,42 @@
         android:id="@+id/main_button_join"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="44sp"
+        android:layout_marginTop="40dp"
         android:background="@drawable/button_casual_form"
         android:backgroundTint="@color/button_orange"
-        android:fontFamily="@font/baloo"
+        android:fontFamily="@font/baloo_cyrillic"
         android:text="@string/main_button_join"
         android:textColor="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.1"
+        app:layout_constraintHorizontal_bias="0.108"
         app:layout_constraintStart_toEndOf="@+id/enter_code"
         app:layout_constraintTop_toBottomOf="@+id/text_enter" />
 
     <Button
         android:id="@+id/main_button_create"
         android:layout_width="300dp"
-        android:layout_marginStart="30dp"
         android:layout_height="75dp"
+        android:layout_marginStart="30dp"
         android:layout_marginTop="80dp"
         android:background="@drawable/button_main_menu_form"
         android:backgroundTint="@color/white_smoke"
-        android:fontFamily="@font/baloo"
+        android:fontFamily="@font/baloo_cyrillic"
+        android:onClick="createEvent"
         android:text="@string/main_button_create"
         android:textColor="@color/black"
         android:textSize="20sp"
         app:layout_constraintStart_toStartOf="@+id/enter_code"
         app:layout_constraintTop_toBottomOf="@+id/enter_code" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/down_layout"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:background="@color/main_orange"
+        android:clickable="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:layout_editor_absoluteX="0dp">
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
