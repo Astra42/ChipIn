@@ -4,36 +4,59 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/background"
+    android:background="@color/white"
+    android:clickable="true"
     tools:context="com.chipin.AddDrinks">
 
-    <TextView
-        android:id="@+id/main_logo"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="25dp"
-        android:layout_marginTop="50dp"
-        android:drawablePadding="10sp"
-        android:fontFamily="@font/baloo"
-        android:gravity="center_vertical"
-        android:text="@string/logo_drinks"
-        android:textColor="@color/white"
-        android:textSize="50sp"
-        app:drawableStartCompat="@drawable/ic_drinks"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/up_layout"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:background="@color/main_orange"
+        android:clickable="true"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/main_logo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="50dp"
+            android:drawablePadding="10sp"
+            android:fontFamily="@font/baloo_cyrillic"
+            android:gravity="center_vertical"
+            android:text="@string/logo_drinks"
+            android:textColor="@color/white"
+            android:textSize="50sp"
+            app:drawableStartCompat="@drawable/ic_drinks"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/down_layout"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:background="@color/main_orange"
+        android:clickable="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:layout_editor_absoluteX="0dp">
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
     <TextView
         android:id="@+id/text_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="110dp"
-        android:fontFamily="@font/baloo"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="60dp"
+        android:fontFamily="@font/baloo_cyrillic"
         android:text="@string/add_new_name"
         android:textColor="@color/black"
         android:textSize="20sp"
-        app:layout_constraintStart_toStartOf="@+id/main_logo"
-        app:layout_constraintTop_toBottomOf="@+id/main_logo" />
+        app:layout_constraintStart_toStartOf="@+id/up_layout"
+        app:layout_constraintTop_toBottomOf="@+id/up_layout" />
 
     <EditText
         android:id="@+id/drink_enter_name"
@@ -43,7 +66,7 @@
         android:autofillHints="@string/add_hint_name"
         android:background="@drawable/input_form"
         android:ems="9"
-        android:fontFamily="@font/baloo"
+        android:fontFamily="@font/baloo_cyrillic"
         android:hint="@string/add_hint_name"
         android:inputType="text"
         android:maxLength="15"
@@ -55,11 +78,11 @@
         tools:ignore="RtlSymmetry" />
 
     <TextView
-        android:id="@+id/text_description"
+        android:id="@+id/text_members"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
-        android:fontFamily="@font/baloo"
+        android:fontFamily="@font/baloo_cyrillic"
         android:text="@string/add_new_description"
         android:textColor="@color/black"
         android:textSize="20sp"
@@ -67,47 +90,16 @@
         app:layout_constraintTop_toBottomOf="@+id/drink_enter_name" />
 
     <EditText
-        android:id="@+id/drink_enter_description"
+        android:id="@+id/drink_enter_members"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="15dp"
         android:autofillHints="@string/add_hint_name"
         android:background="@drawable/input_form"
         android:ems="9"
-        android:fontFamily="@font/baloo"
+        android:fontFamily="@font/baloo_cyrillic"
         android:hint="@string/add_hint_description"
-        android:inputType="text"
-        android:maxLength="15"
-        android:paddingStart="5sp"
-        android:textColor="@color/black"
-        android:textColorHint="@color/hint_color"
-        app:layout_constraintStart_toStartOf="@+id/text_description"
-        app:layout_constraintTop_toBottomOf="@+id/text_description"
-        tools:ignore="RtlSymmetry" />
-
-    <TextView
-        android:id="@+id/text_members"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:fontFamily="@font/baloo"
-        android:text="@string/add_new_members"
-        android:textColor="@color/black"
-        android:textSize="20sp"
-        app:layout_constraintStart_toStartOf="@+id/drink_enter_description"
-        app:layout_constraintTop_toBottomOf="@+id/drink_enter_description" />
-
-    <EditText
-        android:id="@+id/drink_enter_members"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="15dp"
-        android:autofillHints="@string/add_hint_members"
-        android:background="@drawable/input_form"
-        android:ems="9"
-        android:fontFamily="@font/baloo"
-        android:hint="@string/add_hint_members"
-        android:inputType="text"
+        android:inputType="number"
         android:maxLength="15"
         android:paddingStart="5sp"
         android:textColor="@color/black"
@@ -116,31 +108,65 @@
         app:layout_constraintTop_toBottomOf="@+id/text_members"
         tools:ignore="RtlSymmetry" />
 
+    <TextView
+        android:id="@+id/text_cost"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/baloo_cyrillic"
+        android:text="@string/add_new_price"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@+id/drink_enter_members"
+        app:layout_constraintTop_toBottomOf="@+id/drink_enter_members" />
+
+    <EditText
+        android:id="@+id/drink_enter_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:autofillHints="@string/add_hint_price"
+        android:background="@drawable/input_form"
+        android:ems="9"
+        android:fontFamily="@font/baloo_cyrillic"
+        android:hint="@string/add_hint_price"
+        android:inputType="numberDecimal"
+        android:maxLength="15"
+        android:paddingStart="5sp"
+        android:textColor="@color/black"
+        android:textColorHint="@color/hint_color"
+        app:layout_constraintStart_toStartOf="@+id/text_cost"
+        app:layout_constraintTop_toBottomOf="@+id/text_cost"
+        tools:ignore="RtlSymmetry" />
+
     <Button
         android:id="@+id/drink_button_add"
         android:layout_width="165sp"
         android:layout_height="wrap_content"
         android:layout_marginTop="70dp"
+        android:layout_marginEnd="105dp"
         android:background="@drawable/button_casual_form"
         android:backgroundTint="@color/button_orange"
-        android:fontFamily="@font/baloo"
+        android:fontFamily="@font/baloo_cyrillic"
+        android:onClick="addNewPosition"
         android:text="@string/add_new_button"
         android:textColor="@color/black"
-        app:layout_constraintStart_toStartOf="@+id/drink_enter_members"
-        app:layout_constraintTop_toBottomOf="@+id/drink_enter_members" />
+        app:layout_constraintEnd_toEndOf="@+id/drink_enter_price"
+        app:layout_constraintTop_toBottomOf="@+id/drink_enter_price" />
 
     <Button
         android:id="@+id/drink_button_back"
         android:layout_width="165sp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="30dp"
+        android:layout_marginStart="10dp"
         android:layout_marginTop="70dp"
         android:background="@drawable/button_casual_form"
         android:backgroundTint="@color/white_smoke"
-        android:fontFamily="@font/baloo"
+        android:fontFamily="@font/baloo_cyrillic"
+        android:onClick="goBack"
         android:text="@string/back_button"
         android:textColor="@color/black"
         app:layout_constraintStart_toEndOf="@+id/drink_button_add"
-        app:layout_constraintTop_toBottomOf="@+id/drink_enter_members" />
+        app:layout_constraintTop_toBottomOf="@+id/drink_enter_price" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

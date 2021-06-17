@@ -4,56 +4,78 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/background"
+    android:background="@color/white"
+    android:clickable="true"
     tools:context="com.chipin.ElseMenu">
 
-    <TextView
-        android:id="@+id/main_logo"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="25dp"
-        android:layout_marginTop="50dp"
-        android:drawablePadding="10sp"
-        android:fontFamily="@font/baloo"
-        android:gravity="center_vertical"
-        android:text="@string/logo_else"
-        android:textColor="@color/white"
-        android:textSize="50sp"
-        app:drawableStartCompat="@drawable/ic_else"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/up_layout"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:background="@color/main_orange"
+        android:clickable="true"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/main_logo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="50dp"
+            android:drawablePadding="10sp"
+            android:fontFamily="@font/baloo_cyrillic"
+            android:gravity="center_vertical"
+            android:text="@string/logo_else"
+            android:textColor="@color/white"
+            android:textSize="50sp"
+            app:drawableStartCompat="@drawable/ic_else"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/down_layout"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:background="@color/main_orange"
+        android:clickable="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:layout_editor_absoluteX="0dp"></androidx.constraintlayout.widget.ConstraintLayout>
 
     <TextView
         android:id="@+id/text_add"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="85dp"
-        android:fontFamily="@font/baloo"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="25dp"
+        android:fontFamily="@font/baloo_cyrillic"
         android:text="@string/menu_button_add"
         android:textColor="@color/black"
         android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="@+id/main_logo"
+        app:layout_constraintEnd_toEndOf="@+id/up_layout"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/main_logo"
-        app:layout_constraintTop_toBottomOf="@+id/main_logo" />
+        app:layout_constraintStart_toStartOf="@+id/up_layout"
+        app:layout_constraintTop_toBottomOf="@+id/up_layout" />
 
     <Button
         android:id="@+id/else_menu_button_add"
         android:layout_width="50sp"
         android:layout_height="50sp"
         android:layout_marginStart="12dp"
-        android:layout_marginTop="80dp"
+        android:layout_marginTop="15dp"
         android:background="@drawable/ic_add_new"
+        android:onClick="addNewPosition"
         android:textColor="@color/black"
         app:layout_constraintStart_toEndOf="@+id/text_add"
-        app:layout_constraintTop_toBottomOf="@+id/main_logo" />
+        app:layout_constraintTop_toBottomOf="@+id/up_layout" />
 
     <TextView
         android:id="@+id/text_list"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="30dp"
-        android:fontFamily="@font/baloo"
+        android:fontFamily="@font/baloo_cyrillic"
         android:text="@string/menu_text_list"
         android:textColor="@color/black"
         android:textSize="20sp"
@@ -65,11 +87,12 @@
         android:layout_width="266dp"
         android:layout_height="260dp"
         android:layout_marginTop="20dp"
+        android:scrollbars="none"
         app:layout_constraintStart_toStartOf="@+id/text_list"
         app:layout_constraintTop_toBottomOf="@+id/text_list">
 
         <LinearLayout
-            android:id="@+id/menu_list"
+            android:id="@+id/else_menu_list"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical" />
@@ -79,15 +102,16 @@
         android:id="@+id/else_menu_button_back"
         android:layout_width="300sp"
         android:layout_height="45sp"
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="25dp"
         android:background="@drawable/button_casual_form"
         android:backgroundTint="@color/white_smoke"
-        android:fontFamily="@font/baloo"
+        android:fontFamily="@font/baloo_cyrillic"
+        android:onClick="goBack"
         android:text="@string/back_button"
+        android:layout_marginTop="25dp"
+        android:layout_marginStart="10dp"
         android:textColor="@color/black"
         android:textSize="15sp"
-        app:layout_constraintStart_toStartOf="@+id/menu_scroll"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/menu_scroll" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
